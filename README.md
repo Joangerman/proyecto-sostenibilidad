@@ -24,7 +24,7 @@ Considerarem que el projecte ha assolit l'èxit si, en acabar el curs, compleix 
 | 4 | **Proposta de desplegament de sensors** al campus: on col·locar-los, quin tipus i quantes dades recullen. | Hi ha un document amb la ubicació dels sensors per zona i la justificació de cada tria. |
 | 5 | **Estimació de l'impacte**: aigua que es podria estalviar si es detecten i reparen les fuites a temps. | S'inclou un càlcul raonat de l'estalvi potencial (m³ i %) a partir de les dades del prototip o de fonts públiques. |
 | 6 | **Seguiment de la planificació**: el projecte avança segons el diagrama de Gantt. | Cada etapa té les seves tasques al tauler Kanban i, com a mínim, el 80 % estan a "Fet" a la data prevista. |
-| 7 | **Memòria i presentació finals** entregades dins del termini. | Entrega al Campus Virtual i presentació oral feta a la data fixada. |
+| 7 | **Memòria i presentació finals** entregades dins del termini. | Entrega al Campus Virtual i presentació oral feta a la data fixada (15 de desembre de 2026). |
 
 ## Rols de l'equip
 
@@ -49,7 +49,7 @@ Cada membre té un rol principal, però tothom participa en les decisions import
 
 ## Planificació (diagrama de Gantt)
 
-Dates orientatives, amb inici el 2 de novembre de 2026.
+Del 26 d'octubre al 15 de desembre de 2026, data de l'entrega i la presentació finals. Les tasques detallades i les dates exactes són al GitHub Project.
 
 ```mermaid
 gantt
@@ -58,17 +58,21 @@ gantt
     axisFormat %d/%m
 
     section Preparació
-    Diagnòstic i plantejament :a1, 2026-11-02, 14d
-    Disseny del sistema       :a2, 2026-11-16, 14d
+    Diagnòstic i plantejament      :a1, 2026-10-26, 19d
+    Disseny del sistema            :a2, 2026-10-29, 20d
 
     section Desenvolupament
-    Pilot amb sensors         :b1, 2026-11-30, 28d
-    Dashboard                 :b2, 2026-11-30, 42d
-    Regles d'alertes          :b3, 2026-12-28, 28d
+    Pilot amb sensors              :b1, 2026-11-09, 9d
+    Dashboard                      :b2, 2026-11-16, 17d
+    Regles d'alertes i calibratge  :b3, 2026-11-18, 17d
 
     section Tancament
-    Avaluació                 :c1, 2027-01-25, 14d
-    Memòria i presentació     :c2, 2027-02-08, 14d
+    Pàgina web (GitHub Pages)      :c1, 2026-12-01, 4d
+    Avaluació i ampliació          :c2, 2026-12-02, 3d
+    Memòria                        :c3, 2026-11-30, 11d
+    Presentació                    :c4, 2026-12-07, 5d
+    Assaig i revisió final         :c5, 2026-12-14, 1d
+    Entrega i presentació          :milestone, m1, 2026-12-15, 0d
 ```
 
 ## Fonts i llicències
