@@ -34,20 +34,18 @@ Seria la cara visible del sistema, amb un disseny semblant al que hem construït
 - El campus com a laboratori viu de ciutat intel·ligent i sostenible, replicable en altres entorns urbans.
 
 6. Fases del projecte
-1.Diagnòstic: recopilar factures i dades existents, i cartografiar la xarxa d'aigua del campus.
-2.Pilot: instal·lar sensors en 2 o 3 edificis i en una zona de reg.
-3.Dashboard i alertes: desenvolupar la visualització i les regles de detecció.
-4.Avaluació: mesurar l'estalvi aconseguit i ajustar el sistema.
-5. Ampliació: estendre'l a la resta del campus.
+  1.Diagnòstic: recopilar factures i dades existents, i cartografiar la xarxa d'aigua del campus.
+  2.Pilot: instal·lar sensors en 2 o 3 edificis i en una zona de reg.
+  3.Dashboard i alertes: desenvolupar la visualització i les regles de detecció.
+  4.Avaluació: mesurar l'estalvi aconseguit i ajustar el sistema.
+  5. Ampliació: estendre'l a la resta del campus.
 
 7. Riscos i límits
-- Cost d'instal·lació i manteniment dels sensors.
 - Qualitat i fiabilitat de les dades.
 - Necessitat de coordinació amb el servei de manteniment del campus.
 - Falses alertes al principi, mentre es calibren els llindars.
 
 8. Indicadors d'èxit
 - Percentatge de reducció del consum.
-- Temps mitjà entre l'aparició d'una fuita i la seva detecció.
 - Nombre de fuites localitzades.
 - Litres estalviats.
