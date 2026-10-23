@@ -1,0 +1,53 @@
+Gestió intel·ligent de l'aigua a la UAB
+
+Enfocament: Campus UAB
+
+Tema: Crear un sistema intel·ligent per reduir el consum d'aigua al campus, mitjançant sensors que detectin el consum i les possibles fuites, juntament amb un dashboard que permeti visualitzar les dades i detectar consums anòmals.
+
+1. Context i problema
+El campus de la UAB és una petita ciutat: edificis de docència i recerca, laboratoris, residències, restauració, instal·lacions esportives i zones verdes amb reg. Avui l'aigua es gestiona sobretot amb lectures globals i revisions puntuals,
+de manera que una fuita o un consum excessiu pot passar setmanes sense detectar-se i només apareix a la factura. En un context de sequera recurrent a Catalunya, cada metre cúbic perdut té un cost econòmic i ambiental evitable.
+
+2. Objectiu
+Reduir el consum d'aigua del campus detectant pèrdues i usos anòmals gairebé en temps real, i donar als gestors informació clara per decidir on actuar primer.
+
+3. Com funcionaria el sistema
+- Sensors: comptadors i sensors de cabal a punts estratègics: entrada general, edificis principals, xarxa de reg i zones d'alt consum com laboratoris o cafeteries.
+- Transmissió: les dades s'enviarien per una xarxa de baix consum.
+- Emmagatzematge: sèries temporals per edifici i per zona.
+- Detecció d'anomalies: regles senzilles, com ara consum nocturn continuat en un edifici buit, pics fora de l'horari habitual o desviacions respecte al comportament normal de cada zona.
+  Més endavant es podrien incorporar models estadístics o d'aprenentatge automàtic.
+
+4. El dashboard
+Seria la cara visible del sistema, amb un disseny semblant al que hem construït amb dades obertes:
+- Un mapa del campus amb els edificis acolorits segons el consum.
+- Indicadors clau: consum total, litres per persona o per m², variació respecte a la setmana anterior i nombre d'alertes actives.
+- Gràfics d'evolució diària i horària, i comparació entre edificis.
+- Un panell d'alertes amb la ubicació, l'hora i la magnitud del consum anòmal.
+- Filtres per edifici, zona i període.
+
+5. Beneficis esperats
+- Estalvi d'aigua i de costos.
+- Reparació més ràpida de fuites.
+- Dades per planificar inversions (per exemple canviar la grifería o ajustar el reg).
+- Eina de sensibilització per a la comunitat universitària.
+- El campus com a laboratori viu de ciutat intel·ligent i sostenible, replicable en altres entorns urbans.
+
+6. Fases del projecte
+1.Diagnòstic: recopilar factures i dades existents, i cartografiar la xarxa d'aigua del campus.
+2.Pilot: instal·lar sensors en 2 o 3 edificis i en una zona de reg.
+3.Dashboard i alertes: desenvolupar la visualització i les regles de detecció.
+4.Avaluació: mesurar l'estalvi aconseguit i ajustar el sistema.
+5. Ampliació: estendre'l a la resta del campus.
+
+7. Riscos i límits
+- Cost d'instal·lació i manteniment dels sensors.
+- Qualitat i fiabilitat de les dades.
+- Necessitat de coordinació amb el servei de manteniment del campus.
+- Falses alertes al principi, mentre es calibren els llindars.
+
+8. Indicadors d'èxit
+- Percentatge de reducció del consum.
+- Temps mitjà entre l'aparició d'una fuita i la seva detecció.
+- Nombre de fuites localitzades.
+- Litres estalviats.
