@@ -32,7 +32,7 @@ Cada membre té un rol principal, però tothom participa en les decisions import
 
 | Membre | Rol | Responsabilitats principals |
 |--------|-----|-----------------------------|
-| Joan German | **Coordinació i repositori** | Gestiona el repositori i el GitHub Project, convoca les reunions, vetlla pels terminis i fa les entreges al Campus Virtual. |
+| Joan German | **Coordinació i repositori** | Gestiona el repositori i el GitHub Project, convoca les reunions, vetlla pels terminis i fa les entregues al Campus Virtual. |
 | Pol Gamez | **Recerca i contingut** | Recull informació sobre el consum d'aigua a la UAB i casos similars, redacta els objectius i la memòria, cuida la coherència dels textos i ha desenvolupat el prototip del dashboard. |
 | Daniel Tormo | **Dades i pàgina web** | Defineix els criteris d'èxit i els indicadors, dissenya les regles d'alertes i desenvolupa la pàgina web del projecte. |
 | Gerard Rios | **Planificació i avaluació** | Manté el diagrama de Gantt i el tauler Kanban, proposa la ubicació dels sensors, avalua els resultats del prototip i prepara la presentació visual. |
