@@ -1,58 +1,76 @@
-# PROYECTO SOSTENIBILIDAD:
-
 # Gestió intel·ligent de l'aigua a la UAB
 
-Enfocament: Campus UAB
+Proposta de projecte · Grau en Gestió de Ciutats Intel·ligents i Sostenibles · Universitat Autònoma de Barcelona
 
-Tema: Crear un sistema intel·ligent per reduir el consum d'aigua al campus, mitjançant sensors que detectin el consum i les possibles fuites, juntament amb un dashboard que permeti visualitzar les dades i detectar consums anòmals.
+Sistema per reduir el consum d'aigua al campus de la UAB mitjançant sensors de consum i fuites, i un dashboard per visualitzar les dades i detectar consums anòmals.
 
-1. Context i problema:
-El campus de la UAB funciona com una petita ciutat: edificis de docència i recerca, laboratoris, residències, serveis de restauració, instal·lacions esportives i grans zones verdes amb reg. Això genera un consum d'aigua elevat i molt divers. Avui, la gestió es basa sobretot en lectures globals de comptadors i en revisions puntuals, de manera que una fuita o un ús excessiu pot passar setmanes sense detectar-se i només es nota quan arriba la factura. En un context de sequera recurrent a Catalunya, cada metre cúbic perdut té un cost econòmic i ambiental que es podria evitar.
+## Prototip del dashboard
 
-2. Objectiu:
-L'objectiu general és reduir el consum d'aigua del campus. Per aconseguir-ho, el projecte es proposa:
-- Detectar fuites i usos anòmals gairebé en temps real.
-- Saber quins edificis i zones consumeixen més i en quins moments.
-- Donar als gestors informació clara i visual per decidir on actuar primer.
+Obre `dashboard_aigua_uab.html` amb doble clic (necessita connexió a internet per a les llibreries i el mapa base).
 
-3. Descripció del sistema:
-El sistema tindria quatre components que treballen en cadena:
-- Sensors: comptadors i sensors de cabal instal·lats en punts estratègics, com l'entrada general, els edificis principals, la xarxa de reg i les zones d'alt consum (laboratoris, cafeteries, residències).
-- Transmissió: les dades s'enviarien automàticament per una xarxa de baix consum, per exemple LoRaWAN, a una plataforma central.
-- Emmagatzematge: la plataforma guardaria les mesures com a sèries temporals, ordenades per edifici, zona i hora.
-- Detecció d'anomalies: unes regles senzilles revisarien les dades de manera contínua. Per exemple, un consum constant durant la nit en un edifici buit indicaria una possible fuita, i un pic fora de l'horari habitual o una desviació respecte al comportament normal de la zona generaria una alerta. Més endavant es podrien afegir models estadístics o d'aprenentatge automàtic per afinar la detecció.
+> **Les dades són simulades.** S'han creat per mostrar el funcionament de l'eina i no representen consums reals de la UAB. Les ubicacions al mapa són orientatives.
 
-4. El dashboard:
-El dashboard seria la cara visible del sistema i la manera que tindrien els gestors de treballar amb les dades. Tindria un disseny semblant al que hem construït amb dades obertes, amb aquests elements:
-- Mapa del campus amb els edificis acolorits segons el seu consum, per veure d'un cop d'ull on es concentra.
-- Indicadors clau: consum total, litres per persona o per m², variació respecte a la setmana anterior i nombre d'alertes actives.
-- Gràfics d'evolució diària i horària, i comparació entre edificis.
-- Panell d'alertes amb la ubicació, l'hora i la magnitud del consum anòmal.
-- Filtres per edifici, zona i període, que actualitzen tota la vista.
+El prototip inclou mapa del campus, indicadors clau, evolució diària, perfil horari, comparació entre zones, filtres per zona i període, i un panell d'alertes. Les regles de detecció són: consum nocturn sostingut (possible fuita), pic puntual i reg fora de pauta. S'han introduït tres anomalies a propòsit per demostrar que el sistema les detecta.
 
-5. Beneficis esperats
-- Ambientals: menys aigua perduda i un ús més responsable dels recursos.
-- Econòmics: estalvi en la factura i reparacions més ràpides, que eviten danys més grans.
-- De gestió: dades objectives per planificar inversions, com canviar la grifería o ajustar el reg segons el consum real.
-- Educatius i socials: una eina de sensibilització per a la comunitat universitària i un laboratori viu de ciutat intel·ligent i sostenible, replicable en altres entorns urbans.
+## Criteris mínims d'èxit
 
-6. Fases del projecte
-1. Diagnòstic: recopilar factures i dades existents, i cartografiar la xarxa d'aigua del campus per saber des d'on partim.
-2. Disseny: triar els punts de mesura, els sensors i la xarxa de transmissió.
-3. Pilot: instal·lar sensors en 2 o 3 edificis i en una zona de reg, per provar el sistema a petita escala.
-4. Dashboard i alertes: desenvolupar la visualització i les regles de detecció, i calibrar els llindars.
-5. Avaluació: mesurar l'estalvi aconseguit i ajustar el sistema.
-6. Ampliació: estendre'l progressivament a la resta del campus.
+Considerarem que el projecte ha assolit l'èxit si, en acabar el curs, compleix com a mínim aquests criteris:
 
-7. Riscos i límits
-- Cost: la instal·lació i el manteniment dels sensors poden ser elevats.
-- Dades: si els sensors fallen o mesuren malament, les alertes perden fiabilitat.
-- Coordinació: cal treballar amb el servei de manteniment del campus perquè les alertes es converteixin en actuacions.
-- Falses alertes: és normal que n'hi hagi al principi, mentre es calibren els llindars.
+| # | Criteri | Com ho comprovarem |
+|---|---------|--------------------|
+| 1 | **Pàgina web del projecte publicada** amb la descripció, els objectius, la planificació i els resultats. | La pàgina és accessible públicament (GitHub Pages) i està enllaçada des d'aquest README. |
+| 2 | **Prototip de dashboard funcional** amb mapa del campus, indicadors clau, gràfics de consum i filtres per zona i període. | El dashboard s'obre sense errors i tots els filtres actualitzen el mapa, els indicadors i els gràfics. |
+| 3 | **Detecció automàtica d'anomalies** amb almenys tres regles (fuita nocturna, pic puntual i reg fora de pauta). | El panell d'alertes detecta el 100 % de les anomalies introduïdes a les dades de prova, sense falses alarmes a les zones sense anomalies. |
+| 4 | **Proposta de desplegament de sensors** al campus: on col·locar-los, quin tipus i quantes dades recullen. | Hi ha un document amb la ubicació dels sensors per zona i la justificació de cada tria. |
+| 5 | **Estimació de l'impacte**: aigua que es podria estalviar si es detecten i reparen les fuites a temps. | S'inclou un càlcul raonat de l'estalvi potencial (m³ i %) a partir de les dades del prototip o de fonts públiques. |
+| 6 | **Seguiment de la planificació**: el projecte avança segons el diagrama de Gantt. | Cada etapa té les seves tasques al tauler Kanban i, com a mínim, el 80 % estan a "Fet" a la data prevista. |
+| 7 | **Memòria i presentació finals** entregades dins del termini. | Entrega al Campus Virtual i presentació oral feta a la data fixada. |
 
-8. Indicadors d'èxit
-- Percentatge de reducció del consum d'aigua respecte a l'any anterior.
-- Temps mitjà entre l'aparició d'una fuita i la seva detecció.
-- Nombre de fuites localitzades i reparades.
-- Litres estalviats.
-- Proporció d'alertes que acaben sent reals.
+## Rols de l'equip
+
+Cada membre té un rol principal, però tothom participa en les decisions importants i en la revisió final de cada entrega.
+
+| Membre | Rol | Responsabilitats principals |
+|--------|-----|-----------------------------|
+| Joan German | **Coordinació i repositori** | Gestiona el repositori i el GitHub Project, convoca les reunions, vetlla pels terminis i fa les entreges al Campus Virtual. |
+| Pol Gamez | **Recerca i contingut** | Recull informació sobre el consum d'aigua a la UAB i casos similars, redacta els objectius i la memòria i cuida la coherència dels textos. |
+| Daniel Tormo | **Dades i avaluació** | Defineix els criteris d'èxit i els indicadors, dissenya les regles d'alertes, proposa la ubicació dels sensors i avalua els resultats del prototip. |
+| Gerard Rios | **Desenvolupament i planificació** | Manté el diagrama de Gantt i el tauler Kanban, desenvolupa el dashboard i la pàgina web i prepara la presentació visual. |
+
+## Etapes del treball
+
+1. Diagnòstic i plantejament
+2. Disseny del sistema
+3. Pilot amb sensors
+4. Dashboard
+5. Regles d'alertes i calibratge
+6. Avaluació
+7. Ampliació i tancament
+
+## Planificació (diagrama de Gantt)
+
+Dates orientatives, amb inici el 2 de novembre de 2026.
+
+```mermaid
+gantt
+    title Gestió intel·ligent de l'aigua a la UAB
+    dateFormat YYYY-MM-DD
+    axisFormat %d/%m
+
+    section Preparació
+    Diagnòstic i plantejament :a1, 2026-11-02, 14d
+    Disseny del sistema       :a2, 2026-11-16, 14d
+
+    section Desenvolupament
+    Pilot amb sensors         :b1, 2026-11-30, 28d
+    Dashboard                 :b2, 2026-11-30, 42d
+    Regles d'alertes          :b3, 2026-12-28, 28d
+
+    section Tancament
+    Avaluació                 :c1, 2027-01-25, 14d
+    Memòria i presentació     :c2, 2027-02-08, 14d
+```
+
+## Fonts i llicències
+
+Mapa base: OpenFreeMap, © OpenStreetMap. Llibreries: MapLibre GL JS i Chart.js (CDN jsDelivr).
