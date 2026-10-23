@@ -4,6 +4,20 @@ Proposta de projecte · Grau en Gestió de Ciutats Intel·ligents i Sostenibles 
 
 Sistema per reduir el consum d'aigua al campus de la UAB mitjançant sensors de consum i fuites, i un dashboard per visualitzar les dades i detectar consums anòmals.
 
+## Objectius i finalitat
+
+**Problema.** Avui l'aigua del campus es gestiona sobretot amb lectures globals i revisions puntuals, de manera que una fuita o un consum excessiu pot passar setmanes sense detectar-se. En un context de sequera recurrent a Catalunya, cada metre cúbic perdut té un cost econòmic i ambiental evitable.
+
+**Objectiu general.** Reduir el consum d'aigua del campus detectant pèrdues i usos anòmals gairebé en temps real, i donar als gestors informació clara per decidir on actuar primer.
+
+**Objectius específics.**
+- Proposar on col·locar sensors de consum i cabal (entrada general, edificis principals, reg i zones d'alt consum).
+- Desenvolupar un dashboard amb mapa, indicadors clau, gràfics i filtres per zona i període.
+- Definir regles automàtiques de detecció d'anomalies (fuita nocturna, pic puntual i reg fora de pauta).
+- Estimar l'aigua que es podria estalviar si les fuites es detecten i es reparen a temps.
+
+**Finalitat.** Convertir el campus en un laboratori viu de ciutat intel·ligent i sostenible: estalviar aigua i costos, reparar fuites més ràpid, aportar dades per planificar inversions i sensibilitzar la comunitat universitària, amb un model replicable en altres entorns urbans.
+
 ## Prototip del dashboard
 
 Obre `dashboard_aigua_uab.html` amb doble clic (necessita connexió a internet per a les llibreries i el mapa base).
